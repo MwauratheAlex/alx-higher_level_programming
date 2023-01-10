@@ -6,7 +6,4 @@ def uppercase(str):
         if unicode >= 97 and unicode <= 122:
             unicode -= 32
 
-        print(f"{chr(unicode)}", end="")
-
-
-uppercase("BesT")
+        print("{}".format(chr(unicode)), end="")
