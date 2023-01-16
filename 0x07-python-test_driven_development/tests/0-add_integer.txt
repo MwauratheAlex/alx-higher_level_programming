@@ -1,53 +1,68 @@
-First import ``add_integer``
+================
+0-add_integer.py
+================
 
-    >>> add_integer = __import__('0-add_integer').add_integer
+This module contains the function ``add_integer(a, b=98)``
+
+a and b can be integers or floats
+b has a default value of 98
+Returns int(a) + int(b)
+
+======
+Usage:
+======
+First import ``add_integer``
+	>>> add_integer = __import__('0-add_integer').add_integer
 
 Now use it:
 
 Basic usage:
-    >>> add_integer(1, 2)
-    3
-
-Negative input:
-    >>> add_integer(100, -2)
-    98
-
-One input:
-    >>> add_integer(2)
-    100
-
-Float and negative input:
-    >>> add_integer(100.3, -2)
-    98
+	>>> add_integer(1, 2)
+	3
 
 Float overflow:
-    >>> add_integer(1500.5)
-    1598
+    >>> add_integer(2.6, 5.7)
+    7
 
-Float NaN:
-    >>> add_integer(float('NaN'))
-    Traceback (most recent call last):
-    ...
-    ValueError: cannot convert float NaN to integer
+Negative input:
+	>>> add_integer(1, -2)
+	-1
 
-String input:
-    >>> add_integer(4, "School")
-    Traceback (most recent call last):
-    ...
-    TypeError: b must be an integer
+	>>> add_integer(-1, -1)
+	-2
 
-None input:
-    >>> add_integer(None)
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
+One input:
+	>>> add_integer(2)
+	100
 
-Double negative float input:
-    >>> add_integer(-100.5, -10.8)
-    -110
+	>>> add_integer(-10)
+	88
 
-Double string input:
-    >>> add_integer("holberton", "school")
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
+Float:
+	>>> add_integer(100.3, 1)
+	101
+
+	>>> add_integer(100.5, 10.2)
+	110
+
+Wrong input:
+	>>> add_integer("Hello", 23)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_integer(5, "hello")
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+	>>> add_integer(float('NaN'))
+	Traceback (most recent call last):
+	...
+	ValueError: cannot convert float NaN to integer
+
+missing arguement:
+	>>> add_integer()
+	Traceback (most recent call last):
+	...
+	TypeError: add_integer() missing 1 required positional argument: 'a'
