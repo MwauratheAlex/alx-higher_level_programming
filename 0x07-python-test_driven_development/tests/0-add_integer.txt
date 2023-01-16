@@ -20,10 +20,6 @@ Basic usage:
 	>>> add_integer(1, 2)
 	3
 
-Float overflow:
-    >>> add_integer(2.6, 5.7)
-    7
-
 Negative input:
 	>>> add_integer(1, -2)
 	-1
@@ -44,6 +40,11 @@ Float:
 
 	>>> add_integer(100.5, 10.2)
 	110
+
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+	...
+	OverflowError: cannot convert float infinity to integer
 
 Wrong input:
 	>>> add_integer("Hello", 23)
