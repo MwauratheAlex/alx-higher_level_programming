@@ -30,10 +30,10 @@ Matrix must be a list of lists of integers or floats:
 	...
 	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-	>>> matrix_divided([['a', 'b', 'c'], [1, 2, 3]], 2)
+	>>> matrix_divided([['a',None,"hello"], [2, 4, 6]], 2)
 	Traceback (most recent call last):
 	...
-	TypeError: matrix must be a matrix (list of lists) of integers/floats
+	TypeError: matrix must be a matrix (list of lists)of integers/floats
 	
 Each row of the matrix must be of the same size:
 	>>> matrix_divided([[1, 2, 3], [1, 2]], 2)
@@ -51,3 +51,19 @@ Div must be a number (integer or float):
 	Traceback (most recent call last):
 	...
 	TypeError: div must be a number
+
+Div can’t be equal to 0:
+	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+	Traceback (most recent call last):
+	...
+	ZeroDivisionError: division by zero
+
+Dividing by infinity:
+	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], float('inf'))
+	[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+Missing arguements:
+	>>> matrix_divided([[1, 2, 3], [4, 5, 6]])
+	Traceback (most recent call last):
+	...
+	TypeError: matrix_divided() missing 1 required positional argument: 'div'
