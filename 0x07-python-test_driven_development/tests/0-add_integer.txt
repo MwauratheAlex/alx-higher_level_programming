@@ -52,12 +52,17 @@ Wrong input:
 	...
 	TypeError: b must be an integer
 
-	>>> add_integer(None)
+	>>> add_integer(float('NaN'))
 	Traceback (most recent call last):
-	TypeError: a must be an integer
+	...
+	ValueError: cannot convert float NaN to integer
 
 missing arguement:
 	>>> add_integer()
 	Traceback (most recent call last):
 	...
 	TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Float overflow:
+	>>> add_integer(1000.5)
+	1098
