@@ -21,8 +21,8 @@ Basic usage:
 	3
 
 Float overflow:
-    >>> add_integer(1500.5)
-    1598
+    >>> add_integer(2.6, 5.7)
+    7
 
 Negative input:
 	>>> add_integer(1, -2)
