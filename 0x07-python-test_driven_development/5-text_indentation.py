@@ -18,5 +18,5 @@ def text_indentation(text):
                     continue
             print(ch, end="")
         else:
-            print("\n")
+            print(ch + "\n")
             flag = 1
