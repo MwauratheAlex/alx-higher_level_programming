@@ -11,12 +11,13 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     flag = 0
     for ch in text:
+        if flag == 1:
+            if ch == " ":
+                continue
+            flag = 0
         if ch not in ".?:":
-            if flag == 1:
-                flag = 0
-                if ch == " ":
-                    continue
             print(ch, end="")
         else:
-            print(ch + "\n")
+            if ch != " ":
+                print(ch + "\n")
             flag = 1
