@@ -13,7 +13,7 @@ class Square(Rectangle):
     Class contains the method area that
     calculates the area of the square
 
-    and the method __str__ that prints the string 
+    and the method __str__ that prints the string
     representation of the square
     """
     def __init__(self, size):
