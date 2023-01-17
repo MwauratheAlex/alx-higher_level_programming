@@ -64,6 +64,11 @@ Test integer validator:
 	...
 	TypeError: age must be an integer
 
+	>>> bg.integer_validator("age", [3])
+	Traceback (most recent call last):
+	...
+	TypeError: age must be an integer
+
 
 Test area:
 	>>> bg.area()
