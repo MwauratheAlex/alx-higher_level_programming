@@ -19,4 +19,4 @@ class BaseGeometry:
         The function raises an Exception with the message:
         area() is not implemented
         """
-        raise NotImplementedError("area() is not implemented")
+        raise Exception("area() is not implemented")
