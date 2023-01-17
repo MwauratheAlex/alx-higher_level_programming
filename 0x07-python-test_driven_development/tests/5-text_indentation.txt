@@ -1,2 +1,27 @@
-=============
+======================
+5-text_indentation.py
+======================
+This module contains one function, ``text_indentation(text)``
 
+======
+Usage:
+======
+First import:
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Basic usage:
+	>>> text_indentation("Mwaura.Mbugua")
+	Mwaura.
+	<BLANKLINE>
+	Mbugua
+
+text must be a string:
+	>>> text_indentation(['a', 'b', 'c'])
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+
+missing arguement:
+	>>> text_indentation()
+	Traceback (most recent call last):
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
