@@ -51,3 +51,12 @@ Repeated positive numbers:
 
 	>>> my_list.print_sorted()
 	[-4, -4, 1, 2, 2, 3, 4, 5]
+
+Empty list:
+	>>> my_list.clear()
+
+	>>> print(my_list)
+	[]
+
+	>>> my_list.print_sorted()
+	[]
