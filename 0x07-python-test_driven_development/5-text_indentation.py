@@ -14,7 +14,8 @@ def text_indentation(text):
         if ch not in ".?:":
             if flag == 1:
                 flag = 0
-                continue
+                if ch == " ":
+                    continue
             print(ch, end="")
         else:
             print("\n")
