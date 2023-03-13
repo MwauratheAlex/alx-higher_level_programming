@@ -9,10 +9,6 @@ function secondLargest (args) {
   for (let i = 0; i < args.length; i++) {
     const num = parseInt(args[i]);
 
-    if (isNaN(num)) {
-      return (0);
-    }
-
     if (num > largest) {
       secondLargest = largest;
       largest = num;
