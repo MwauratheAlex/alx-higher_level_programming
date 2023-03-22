@@ -22,7 +22,10 @@ if __name__ == "__main__":
 
     cur = conn.cursor()
 
-    state_name = sys.argv[4].replace("'", "").replace('"', '').replace(" ", "")
+    try:
+        state_name = sys.argv[4].replace("'", "").replace('"', '')
+    except (IndexError):
+        state_name = ""
 
     query = "SELECT cities.name FROM cities "
     query += "JOIN states ON states.id=cities.state_id "
