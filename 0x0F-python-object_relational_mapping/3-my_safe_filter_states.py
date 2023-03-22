@@ -22,7 +22,6 @@ if __name__ == "__main__":
 
     cur = conn.cursor()
     state_name = sys.argv[4].replace('"', '').replace("'","").replace(";","").replace("TABLE", "")
-    print(state_name)
 
     cur.execute(
             "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id ASC"
