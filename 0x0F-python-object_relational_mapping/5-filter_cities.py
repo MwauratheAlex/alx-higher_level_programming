@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
     query = "SELECT cities.name FROM cities "
     query += "JOIN states ON states.id=cities.state_id "
-    query += f"WHERE states.name='{state_name}'"
+    query += f"WHERE states.name LIKE BINARY '{state_name}'"
 
     cur.execute(query)
 
