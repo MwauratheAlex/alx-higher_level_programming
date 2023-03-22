@@ -32,6 +32,9 @@ if __name__ == "__main__":
     cur.execute(query)
 
     cities = cur.fetchall()
+    
+    if len(cities) == 0:
+        print()
 
     for i in range(len(cities)):
         print(cities[i][0], end="\n" if i == (len(cities) - 1) else ", ")
