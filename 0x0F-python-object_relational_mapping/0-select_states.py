@@ -7,25 +7,27 @@ The script should take 3 arguments:
  - database name
  """
 
-import MySQLdb
-import sys
 
-conn = MySQLdb.connect(
-        host='localhost',
-        port=3306,
-        user=sys.argv[1],
-        passwd=sys.argv[2],
-        db=sys.argv[3],
-        charset='utf8')
+if __name__ == '__main__':
+    import MySQLdb
+    import sys
 
-cur = conn.cursor()
+    conn = MySQLdb.connect(
+            host='localhost',
+            port=3306,
+            user=sys.argv[1],
+            passwd=sys.argv[2],
+            db=sys.argv[3],
+            charset='utf8')
 
-cur.execute("SELECT * FROM states ORDER BY id ASC")
+    cur = conn.cursor()
 
-states = cur.fetchall()
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
 
-for state in states:
-    print(state)
+    states = cur.fetchall()
 
-cur.close()
-conn.close()
+    for state in states:
+        print(state)
+
+    cur.close()
+    conn.close()
