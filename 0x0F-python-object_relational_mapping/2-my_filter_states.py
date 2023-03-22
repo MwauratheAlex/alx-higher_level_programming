@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     cur = conn.cursor()
 
-    cur.execute(f"SELECT * FROM states WHERE name='{sys.argv[4]}'")
+    cur.execute("SELECT * FROM states WHERE name='{}'".format(sys.argv[4]))
 
     states = cur.fetchall()
 
