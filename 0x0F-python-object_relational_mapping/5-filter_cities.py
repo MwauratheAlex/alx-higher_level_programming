@@ -32,7 +32,6 @@ if __name__ == "__main__":
     cur.execute(query)
 
     cities = cur.fetchall()
-    
     if len(cities) == 0:
         print()
 
