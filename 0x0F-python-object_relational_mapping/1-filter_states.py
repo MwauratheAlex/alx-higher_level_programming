@@ -21,7 +21,7 @@ if __name__ == "__main__":
             db=sys.argv[3],
             charset='utf8')
     cur = conn.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' OR name LIKE 'n%' ORDER BY id ASC")
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC")
     states = cur.fetchall()
 
     for state in states:
