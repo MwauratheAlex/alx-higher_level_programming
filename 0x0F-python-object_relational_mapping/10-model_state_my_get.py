@@ -27,3 +27,5 @@ if __name__ == "__main__":
             print(r.id)
     else:
         print("Not found")
+
+    session.close()

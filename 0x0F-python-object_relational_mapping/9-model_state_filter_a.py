@@ -25,3 +25,5 @@ if __name__ == "__main__":
 
     for r in result:
         print(f"{r.id}: {r.name}")
+
+    session.close()
