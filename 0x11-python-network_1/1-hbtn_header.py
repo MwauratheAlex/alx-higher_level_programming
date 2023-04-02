@@ -4,5 +4,6 @@ of the X-Request-Id variable found in the header of the response."""
 import sys
 import urllib.request
 
-with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as response:
+url = sys.argv[1]
+with urllib.request.urlopen(url) as response:
     print(response.headers.__getitem__('X-Request-Id'))
