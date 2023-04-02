@@ -6,8 +6,12 @@ the body of the response"""
 if __name__ == "__main__":
     import sys
     import urllib.request
+    from urllib.error import URLError
 
     url = sys.argv[1]
 
-    with urllib.request.urlopen(url) as response:
-        print(response.read())
+    try:
+        with urllib.request.urlopen(url) as response:
+            print(response.read())
+    except URLError as e:
+        print('Error code:', e.code)
