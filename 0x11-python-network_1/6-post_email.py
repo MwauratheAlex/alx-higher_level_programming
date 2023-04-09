@@ -9,7 +9,7 @@ if __name__ == "__main__":
     import requests
 
     url = sys.argv[1]
-    data = {"email" : sys.argv[2]}
+    data = {"email": sys.argv[2]}
 
     with requests.post(url, data=data) as response:
         print(response.text)
